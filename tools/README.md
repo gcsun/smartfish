@@ -1,6 +1,6 @@
 # Tools 使用说明
 
-## 1. scrapy_douban_book 爬取豆瓣图书信-息
+## 1. scrapy_douban_book 爬取豆瓣图书信息
 
 ### 1.1 安装scrapy库
 
