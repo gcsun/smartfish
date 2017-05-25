@@ -21,5 +21,6 @@ class JsonWriterPipeline(object):
         return item
 
     def close_spider(self, spider):
-        self.file.write("]")
+        self.file.seek(-2, 2)
+        self.file.write("\n]")
         self.file.close()

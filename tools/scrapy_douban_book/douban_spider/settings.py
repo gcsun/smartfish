@@ -58,14 +58,17 @@ COOKIES_ENABLED = False
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#}
+EXTENSIONS = {
+    'scrapy.extensions.closespider.CloseSpider': 500,
+}
+# CLOSESPIDER_TIMEOUT = 10
+# CLOSESPIDER_ITEMCOUNT = 1000
+
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'douban_spider.pipelines.JsonWriterPipeline': 300,
+    'douban_spider.pipelines.JsonWriterPipeline': 500,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
